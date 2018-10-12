@@ -23,11 +23,6 @@ public class Author {
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
-
-    public Author() {
-    }
-
-
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -81,33 +76,30 @@ public class Author {
     }
 
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-        Author author = (Author) object;
+        Author author = (Author) o;
 
-        if (!id.equals(author.id)) return false;
-
-        return true;
-    }
-
-
-    public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + id.hashCode();
-        return result;
+        return id != null ? id.equals(author.id) : author.id == null;
     }
 
 
     @Override
-    public java.lang.String toString() {
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+
+
+    @Override
+    public String toString() {
         return "Author{" +
-               "id=" + id +
-               ", firstName='" + firstName + '\'' +
-               ", lastName='" + lastName + '\'' +
-               ", books=" + books +
-               '}';
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
     }
 }

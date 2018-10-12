@@ -10,9 +10,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by jt on 5/16/17.
- */
 @Component
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -36,11 +33,6 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
     }
 
     private void initData(){
-
-        Publisher publisher = new Publisher();
-        publisher.setName("foo");
-        publisher.setAddress("12th Street, LA");
-        publisherRepository.save(publisher);
 
         //Eric
         Author eric = new Author("Eric", "Evans");

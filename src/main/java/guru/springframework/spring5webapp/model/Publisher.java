@@ -57,22 +57,22 @@ public class Publisher {
 
         Publisher publisher = (Publisher) o;
 
-        return id.equals(publisher.id);
+        return id != null ? id.equals(publisher.id) : publisher.id == null;
     }
 
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return id != null ? id.hashCode() : 0;
     }
 
 
     @Override
     public String toString() {
         return "Publisher{" +
-               "id=" + id +
-               ", name='" + name + '\'' +
-               ", address='" + address + '\'' +
-               '}';
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }
