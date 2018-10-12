@@ -34,11 +34,13 @@ public class Book {
     public Book() {
     }
 
+
     public Book(String title, String isbn, Publisher publisher) {
         this.title = title;
         this.isbn = isbn;
         this.publisher = publisher;
     }
+
 
     public Book(String title, String isbn, Publisher publisher, Set<Author> authors) {
         this.title = title;
@@ -77,9 +79,11 @@ public class Book {
         this.isbn = isbn;
     }
 
+
     public Publisher getPublisher() {
         return publisher;
     }
+
 
     public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
@@ -116,11 +120,11 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", authors=" + authors +
-                '}';
+               "id=" + id +
+               ", title='" + title + '\'' +
+               ", isbn='" + isbn + '\'' +
+               ", publisher='" + publisher + '\'' +
+               ", authors=" + authors +
+               '}';
     }
 }

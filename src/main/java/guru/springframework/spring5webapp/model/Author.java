@@ -23,6 +23,11 @@ public class Author {
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 
+
+    public Author() {
+    }
+
+
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -96,10 +101,10 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", books=" + books +
-                '}';
+               "id=" + id +
+               ", firstName='" + firstName + '\'' +
+               ", lastName='" + lastName + '\'' +
+               ", books=" + books +
+               '}';
     }
 }

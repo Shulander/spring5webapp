@@ -7,11 +7,16 @@ import javax.persistence.Id;
 
 @Entity
 public class Publisher {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String address;
+
+
+    public Publisher() {
+    }
 
 
     public Publisher(String name, String address) {
@@ -70,9 +75,9 @@ public class Publisher {
     @Override
     public String toString() {
         return "Publisher{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                '}';
+               "id=" + id +
+               ", name='" + name + '\'' +
+               ", address='" + address + '\'' +
+               '}';
     }
 }
