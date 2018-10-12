@@ -9,3 +9,8 @@ If you would like learn about what's new in Spring Framework 5, click [here](htt
 If you'd like to learn more about the cool new reactive types in Spring Framework 5, click [here](https://springframework.guru/spring-web-reactive/)
 
 You can learn about my Spring Framework 5 Online course [here.](https://courses.springframework.guru/p/spring-framework-5-begginer-to-guru)
+
+
+access: http://localhost:8080/h2-console
+
+connect to:  jdbc:h2:mem:testdb

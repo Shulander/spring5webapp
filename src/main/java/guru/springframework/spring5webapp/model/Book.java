@@ -117,8 +117,8 @@ public class Book {
     }
 
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "Book{" +
                "id=" + id +
                ", title='" + title + '\'' +
